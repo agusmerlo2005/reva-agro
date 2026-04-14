@@ -4,25 +4,36 @@ import { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { FaChevronLeft, FaHistory, FaIndustry, FaInstagram } from 'react-icons/fa';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function NosotrosPage() {
   
-  // Arreglo para el scroll automático al inicio
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
   return (
     <main className="min-h-screen bg-zinc-50 font-sans">
-      {/* Navbar Minimalista */}
-      <nav className="p-5 border-b border-zinc-200 bg-white sticky top-0 z-50">
-        <div className="max-w-7xl mx-auto flex items-center justify-between">
-          <Link href="/" className="group flex items-center gap-2 text-zinc-600 hover:text-red-600 transition-colors font-black uppercase text-xs tracking-widest">
+      {/* Navbar Oscuro (Igual a la Home) */}
+      <nav className="p-5 border-b border-zinc-800 bg-zinc-900 sticky top-0 z-50">
+        <div className="max-w-7xl mx-auto flex items-center justify-between px-4">
+          <Link 
+            href="/" 
+            className="group flex items-center gap-2 text-zinc-400 hover:text-red-500 transition-colors font-black uppercase text-xs tracking-widest"
+          >
             <FaChevronLeft className="group-hover:-translate-x-1 transition-transform" /> Volver
           </Link>
-          <div className="text-zinc-900 font-black italic tracking-tighter text-xl">
-            REVA <span className="text-red-600">AGRO</span>
-          </div>
+          
+          <Link href="/" className="relative h-10 w-32 md:w-40 transition-transform hover:scale-105">
+            <Image 
+              src="/images/reva-agro-logo-nuevo-blanco.png" 
+              alt="REVA AGRO" 
+              fill 
+              sizes="(max-width: 768px) 128px, 160px"
+              className="object-contain object-right md:object-center" 
+              priority
+            />
+          </Link>
         </div>
       </nav>
 

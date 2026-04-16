@@ -143,16 +143,28 @@ export default function HomePage() {
         {isLoading && <Loader />}
       </AnimatePresence>
 
-      {/* Navbar */}
-      <nav className="sticky top-0 z-50 bg-zinc-900/95 backdrop-blur-sm p-4 border-b border-zinc-800">
-        <div className="max-w-7xl mx-auto flex justify-between items-center px-4">
-          <div className="relative h-10 w-40">
-            <Image src="/images/reva-agro-logo-nuevo-blanco.png" alt="ReVa Agro Logo" fill className="object-contain" priority />
-          </div>
-          <div className="hidden md:flex gap-8 text-zinc-400 text-sm font-bold uppercase tracking-widest">
-            <a href="#productos" className="hover:text-red-500 transition-colors">Productos</a>
-            <a href="#nosotros" className="hover:text-red-500 transition-colors">Nosotros</a>
-            <a href="#contacto" className="hover:text-red-500 transition-colors">Contacto</a>
+      {/* Navbar Corregido para Mobile */}
+      <nav className="sticky top-0 z-50 bg-zinc-900/95 backdrop-blur-sm border-b border-zinc-800">
+        <div className="max-w-7xl mx-auto px-4 py-4">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+            
+            {/* Logo */}
+            <div className="relative h-10 w-40 flex-shrink-0">
+              <Image 
+                src="/images/reva-agro-logo-nuevo-blanco.png" 
+                alt="ReVa Agro Logo" 
+                fill 
+                className="object-contain" 
+                priority 
+              />
+            </div>
+
+            {/* Links - Ahora visibles en móvil con scroll horizontal o centrados */}
+            <div className="flex gap-6 md:gap-8 text-zinc-400 text-[10px] md:text-sm font-bold uppercase tracking-widest overflow-x-auto no-scrollbar pb-2 md:pb-0">
+              <a href="#productos" className="hover:text-red-500 transition-colors whitespace-nowrap">Productos</a>
+              <a href="#nosotros" className="hover:text-red-500 transition-colors whitespace-nowrap">Nosotros</a>
+              <a href="#contacto" className="hover:text-red-500 transition-colors whitespace-nowrap">Contacto</a>
+            </div>
           </div>
         </div>
       </nav>

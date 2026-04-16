@@ -294,7 +294,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* MODAL FICHA TÉCNICA - CORREGIDO PARA MÓVILES */}
+      {/* MODAL FICHA TÉCNICA */}
       <AnimatePresence>
         {selectedProduct && (
           <motion.div 
@@ -311,7 +311,6 @@ export default function HomePage() {
               className="bg-white rounded-[2rem] md:rounded-[3rem] overflow-hidden max-w-4xl w-full max-h-[95vh] flex flex-col md:flex-row relative shadow-2xl" 
               onClick={(e) => e.stopPropagation()}
             >
-              {/* Botón Cerrar Flotante */}
               <button 
                 onClick={() => setSelectedProduct(null)} 
                 className="absolute top-4 right-4 z-20 bg-white/80 backdrop-blur-md p-2 rounded-full text-zinc-900 hover:text-red-600 transition-colors shadow-sm"
@@ -319,7 +318,6 @@ export default function HomePage() {
                 <FaTimes size={20} />
               </button>
 
-              {/* Imagen: Arriba en móvil, Izquierda en PC */}
               <div className="h-48 md:h-auto md:w-1/2 bg-zinc-50 p-6 md:p-12 flex items-center justify-center relative">
                 <div className="relative h-full w-full">
                   <Image 
@@ -332,7 +330,6 @@ export default function HomePage() {
                 </div>
               </div>
 
-              {/* Contenido: Abajo en móvil con SCROLL, Derecha en PC */}
               <div className="flex-grow md:w-1/2 p-6 md:p-12 flex flex-col overflow-y-auto">
                 <h3 className="text-2xl md:text-4xl font-black uppercase text-zinc-900 mb-4 md:mb-6 italic leading-tight">
                   {selectedProduct.name}
@@ -364,10 +361,12 @@ export default function HomePage() {
         )}
       </AnimatePresence>
 
-      {/* Footer */}
-      <footer id="contacto" className="bg-zinc-900 text-white pt-32 pb-12">
-        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 md:gap-24 mb-16 md:mb-24">
-          <div>
+      {/* FOOTER CORREGIDO PARA iPHONE */}
+      <footer id="contacto" className="bg-zinc-900 text-white pt-24 pb-12 w-full overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 md:px-6 grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24 mb-16 md:mb-24 w-full">
+          
+          {/* Bloque de Contacto */}
+          <div className="w-full">
             <div className="relative h-16 w-56 mb-10">
               <Image 
                 src="/images/reva-agro-logo-nuevo-blanco.png" 
@@ -376,33 +375,37 @@ export default function HomePage() {
                 className="object-contain object-left"
               />
             </div>
-            <div className="space-y-8 text-zinc-400">
-              <div className="flex items-center gap-6">
-                <div className="bg-red-600/10 p-4 rounded-2xl text-red-600"><FaMapMarkerAlt size={24} /></div>
-                <div>
+            
+            <div className="space-y-6 md:space-y-8 text-zinc-400 w-full">
+              <div className="flex items-center gap-4 md:gap-6 w-full">
+                <div className="bg-red-600/10 p-3 md:p-4 rounded-2xl text-red-600 flex-shrink-0"><FaMapMarkerAlt size={20} className="md:w-6 md:h-6" /></div>
+                <div className="w-full">
                   <p className="text-[10px] uppercase font-bold tracking-widest mb-1">Ubicación</p>
-                  <p className="text-white text-lg font-bold italic">Armstrong, Santa Fe, Argentina</p>
+                  <p className="text-white text-sm md:text-lg font-bold italic leading-tight">Armstrong, Santa Fe, Argentina</p>
                 </div>
               </div>
-              <div className="flex items-center gap-6">
-                <div className="bg-red-600/10 p-4 rounded-2xl text-red-600"><FaWhatsapp size={24} /></div>
-                <div>
+              
+              <div className="flex items-center gap-4 md:gap-6 w-full">
+                <div className="bg-red-600/10 p-3 md:p-4 rounded-2xl text-red-600 flex-shrink-0"><FaWhatsapp size={20} className="md:w-6 md:h-6" /></div>
+                <div className="w-full">
                   <p className="text-[10px] uppercase font-bold tracking-widest mb-1">WhatsApp</p>
-                  <p className="text-white text-lg font-bold italic">+54 9 3471 592559</p>
+                  <p className="text-white text-sm md:text-lg font-bold italic leading-tight">+54 9 3471 592559</p>
                 </div>
               </div>
-              <div className="flex items-center gap-6">
-                <div className="bg-red-600/10 p-4 rounded-2xl text-red-600"><FaEnvelope size={24} /></div>
-                <div>
+              
+              {/* Fix del Email: break-all y font-size adaptativo */}
+              <div className="flex items-center gap-4 md:gap-6 w-full overflow-hidden">
+                <div className="bg-red-600/10 p-3 md:p-4 rounded-2xl text-red-600 flex-shrink-0"><FaEnvelope size={20} className="md:w-6 md:h-6" /></div>
+                <div className="w-full">
                   <p className="text-[10px] uppercase font-bold tracking-widest mb-1">Email</p>
-                  <p className="text-white text-lg font-bold italic">revaagroimplementos@gmail.com</p>
+                  <p className="text-white text-sm md:text-lg font-bold italic leading-tight break-all">revaagroimplementos@gmail.com</p>
                 </div>
               </div>
             </div>
           </div>
           
-          {/* MAPA CON W-FULL ASEGURADO */}
-          <div className="w-full h-[400px] rounded-[3rem] overflow-hidden grayscale invert-[0.9] border border-zinc-800 shadow-2xl">
+          {/* Bloque del Mapa */}
+          <div className="w-full h-[300px] md:h-[400px] rounded-[2rem] md:rounded-[3rem] overflow-hidden grayscale invert-[0.9] border border-zinc-800 shadow-2xl">
             <iframe 
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13410.87184281313!2d-61.603314!3d-32.7745964!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95b77826315582f3%3A0xc34346294709d185!2sArmstrong%2C%20Santa%20Fe!5e0!3m2!1ses-419!2sar!4v1713137000000!5m2!1ses-419!2sar" 
               width="100%" 
@@ -415,21 +418,22 @@ export default function HomePage() {
           </div>
         </div>
         
-        {/* TEXTOS INFERIORES CENTRADOS EN MÓVIL Y TRACKING AJUSTADO */}
-        <div className="max-w-7xl mx-auto px-6 border-t border-zinc-800 pt-12 flex flex-col md:flex-row justify-between items-center gap-8 text-center md:text-left">
-          <div className="text-zinc-600 text-[10px] tracking-widest md:tracking-[0.5em] uppercase font-bold">
+        {/* Créditos Inferiores */}
+        <div className="max-w-7xl mx-auto px-4 md:px-6 border-t border-zinc-800 pt-12 flex flex-col md:flex-row justify-between items-center gap-6 w-full text-center md:text-left">
+          {/* Fix del Tracking: En móvil es normal, en PC se estira */}
+          <div className="text-zinc-600 text-[10px] tracking-normal md:tracking-[0.5em] uppercase font-bold w-full">
             © 2026 REVA AGRO | Armstrong, Santa Fe
           </div>
           
-          <div className="flex flex-col items-center md:items-end gap-2">
-            <div className="flex items-center gap-2">
+          <div className="flex flex-col items-center md:items-end gap-2 w-full">
+            <div className="flex items-center justify-center md:justify-end gap-2 w-full">
               <span className="text-zinc-600 text-[10px] tracking-widest uppercase font-bold">Desarrollado por</span>
               <span className="text-zinc-400 text-[11px] font-black uppercase italic">Agustín Merlo</span>
             </div>
             <a 
               href="https://www.instagram.com/digitall_forge" 
               target="_blank" 
-              className="flex items-center gap-2 text-zinc-500 hover:text-red-600 transition-all"
+              className="flex items-center justify-center md:justify-end gap-2 text-zinc-500 hover:text-red-600 transition-all w-full"
             >
               <FaInstagram size={14} />
               <span className="text-[10px] font-black uppercase tracking-[0.2em]">DigitalForge</span>

@@ -366,7 +366,7 @@ export default function HomePage() {
 
       {/* Footer */}
       <footer id="contacto" className="bg-zinc-900 text-white pt-32 pb-12">
-        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-24 mb-24">
+        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 md:gap-24 mb-16 md:mb-24">
           <div>
             <div className="relative h-16 w-56 mb-10">
               <Image 
@@ -401,7 +401,8 @@ export default function HomePage() {
             </div>
           </div>
           
-          <div className="h-[400px] rounded-[3rem] overflow-hidden grayscale invert-[0.9] border border-zinc-800 shadow-2xl">
+          {/* MAPA CON W-FULL ASEGURADO */}
+          <div className="w-full h-[400px] rounded-[3rem] overflow-hidden grayscale invert-[0.9] border border-zinc-800 shadow-2xl">
             <iframe 
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13410.87184281313!2d-61.603314!3d-32.7745964!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95b77826315582f3%3A0xc34346294709d185!2sArmstrong%2C%20Santa%20Fe!5e0!3m2!1ses-419!2sar!4v1713137000000!5m2!1ses-419!2sar" 
               width="100%" 
@@ -414,8 +415,9 @@ export default function HomePage() {
           </div>
         </div>
         
-        <div className="max-w-7xl mx-auto px-6 border-t border-zinc-800 pt-12 flex flex-col md:flex-row justify-between items-center gap-8">
-          <div className="text-zinc-600 text-[10px] tracking-[0.5em] uppercase font-bold">
+        {/* TEXTOS INFERIORES CENTRADOS EN MÓVIL Y TRACKING AJUSTADO */}
+        <div className="max-w-7xl mx-auto px-6 border-t border-zinc-800 pt-12 flex flex-col md:flex-row justify-between items-center gap-8 text-center md:text-left">
+          <div className="text-zinc-600 text-[10px] tracking-widest md:tracking-[0.5em] uppercase font-bold">
             © 2026 REVA AGRO | Armstrong, Santa Fe
           </div>
           

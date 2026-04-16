@@ -1,6 +1,13 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import SmoothScroll from "@/components/SmoothScroll";
+
+// Esta es la corrección clave para que el iPhone detecte la escala real
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+};
 
 export const metadata: Metadata = {
   title: "ReVa Agro | Implementos Agrícolas en Armstrong",
@@ -21,7 +28,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es" className="scroll-smooth">
-      <body className="antialiased selection:bg-red-600 selection:text-white bg-zinc-50">
+      <body className="antialiased selection:bg-red-600 selection:text-white bg-zinc-50 overflow-x-hidden">
         <SmoothScroll>
           {children}
         </SmoothScroll>

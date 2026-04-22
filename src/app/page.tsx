@@ -59,7 +59,7 @@ export default function HomePage() {
   const categories = ['Todos', 'Acoplados Tanques', 'Grúas', 'Playos'];
 
   const products = [
-    // --- ACOPLADOS TANQUES (Mantenemos los cambios anteriores técnicos) ---
+    // --- ACOPLADOS TANQUES ---
     {
       id: 'vare-1400',
       category: 'Acoplados Tanques',
@@ -129,7 +129,7 @@ export default function HomePage() {
         "Opcionales: Kits de luces / Llantas duales"
       ]
     },
-    // --- GRÚAS: ACTUALIZACIÓN FICHA TÉCNICA (image_16.png, image_17.png, image_18.png) ---
+    // --- GRÚAS ---
     {
       id: 'condor-1',
       category: 'Grúas',
@@ -184,7 +184,7 @@ export default function HomePage() {
         "Opcionales: Llantas duales"
       ]
     },
-    // --- PLAYOS: ACTUALIZACIÓN FICHA TÉCNICA (image_15.png) ---
+    // --- PLAYOS ---
     {
       id: 'playo-4tn',
       category: 'Playos',
@@ -375,35 +375,50 @@ export default function HomePage() {
                   <p className="text-white text-sm md:text-lg font-bold italic leading-tight">Armstrong, Santa Fe, Argentina</p>
                 </div>
               </div>
+
+              {/* WHATSAPP INTERACTIVO */}
               <div className="flex items-center gap-4 md:gap-6">
                 <div className="bg-red-600/10 p-3 md:p-4 rounded-2xl text-red-600"><FaWhatsapp size={20} /></div>
                 <div>
                   <p className="text-[10px] uppercase font-bold tracking-widest mb-1">WhatsApp</p>
-                  <p className="text-white text-sm md:text-lg font-bold italic leading-tight">+54 9 3471 592559</p>
+                  <a 
+                    href="https://wa.me/5493471592559" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-white text-sm md:text-lg font-bold italic leading-tight hover:text-red-500 transition-colors"
+                  >
+                    +54 9 3471 592559
+                  </a>
                 </div>
               </div>
+
+              {/* EMAIL INTERACTIVO */}
               <div className="flex items-center gap-4 md:gap-6 overflow-hidden">
                 <div className="bg-red-600/10 p-3 md:p-4 rounded-2xl text-red-600"><FaEnvelope size={20} /></div>
                 <div>
                   <p className="text-[10px] uppercase font-bold tracking-widest mb-1">Email</p>
-                  <p className="text-white text-sm md:text-lg font-bold italic leading-tight break-all">revaagroimplementos@gmail.com</p>
+                  <a 
+                    href="mailto:revaagroimplementos@gmail.com"
+                    className="text-white text-sm md:text-lg font-bold italic leading-tight break-all hover:text-red-500 transition-colors"
+                  >
+                    revaagroimplementos@gmail.com
+                  </a>
                 </div>
               </div>
             </div>
           </div>
           
-          {/* Bloque del Mapa - Ubicación Exacta sobre RN9 */}
-<div className="w-full h-[300px] md:h-[400px] rounded-[2rem] md:rounded-[3rem] overflow-hidden grayscale invert-[0.9] border border-zinc-800 shadow-2xl">
-  <iframe 
-    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3351.468239459379!2d-61.563680!3d-32.781166!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzLCsDQ2JzUyLjIiUyA2McKwMzMnNDkuMiJX!5e0!3m2!1ses!2sar!4v1713735000000!5m2!1ses!2sar" 
-    width="100%" 
-    height="100%" 
-    style={{ border: 0 }} 
-    allowFullScreen 
-    loading="lazy"
-    referrerPolicy="no-referrer-when-downgrade"
-  ></iframe>
-</div>
+          <div className="w-full h-[300px] md:h-[400px] rounded-[2rem] md:rounded-[3rem] overflow-hidden grayscale invert-[0.9] border border-zinc-800 shadow-2xl">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3351.468239459379!2d-61.563680!3d-32.781166!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzLCsDQ2JzUyLjIiUyA2McKwMzMnNDkuMiJX!5e0!3m2!1ses!2sar!4v1713735000000!5m2!1ses!2sar" 
+              width="100%" 
+              height="100%" 
+              style={{ border: 0 }} 
+              allowFullScreen 
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
         </div>
         
         <div className="max-w-7xl mx-auto px-4 md:px-6 border-t border-zinc-800 pt-12 flex flex-col md:flex-row justify-between items-center gap-6 text-center md:text-left">

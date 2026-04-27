@@ -80,7 +80,7 @@ export default function HomePage() {
         "Capacidad: 3500 litros",
         "Transporte de: agua, fertilizantes, leche y combustibles",
         "Llantas simples de 17\" x 7\" x 1/4\"",
-        "Ejes de 2\" 1/2 con elásticos para 6tn",
+        "Ejes de 2\" 1/2 con elásticos para 4tn",
         "Bidonera trasera y delantera",
         "Color de chasis: a elección",
         "Color de tanque: Amarillo - Gris Claro",
@@ -94,7 +94,7 @@ export default function HomePage() {
       category: 'Acoplados Tanques',
       name: 'Acoplado Tanque Titán 4550',
       specs: '4550 Litros | Llantas Duales 16\"',
-      image: '/images/3500 - TITAN 2.png',
+      image: '/images/4550 TITAN.png',
       wppMsg: 'Hola! Consulto por el Acoplado Tanque Titán 4550lts.',
       fullSpecs: [
         "Capacidad: 4550 litros",
@@ -140,9 +140,7 @@ export default function HomePage() {
       fullSpecs: [
         "1 Movimiento hidráulico // Levante",
         "Capacidad de carga: 2.000 kg",
-        "Altura máxima de elevación: entre 5 y 6 metros (Corregido!)",
-        "Válvula de seguridad contra sobrecargas",
-        "Pintura poliuretánica de alta resistencia",
+        "Altura máxima de elevación: entre 5 y 6 metros",
         "Colores a elección",
         "Opcionales: Llantas duales"
       ]
@@ -157,10 +155,7 @@ export default function HomePage() {
       fullSpecs: [
         "2 Movimientos hidráulicos // Levante + Extensión",
         "Capacidad de carga: 2.000 kg",
-        "Altura máxima de elevación: entre 5 y 6 metros (Corregido!)",
-        "Giro de 360 grados sobre rodillos",
-        "Ideal para movimiento de bolsones de fertilizante",
-        "Estructura reforzada para uso continuo",
+        "Altura máxima de elevación: entre 5 y 6 metros",
         "Colores a elección",
         "Opcionales: Llantas duales"
       ]
@@ -192,7 +187,7 @@ export default function HomePage() {
         "Dimensiones: largo 4000mm x ancho 1800mm (Corregido!)",
         "Ejes de 2\" con elásticos para 4tn",
         "Puertas laterales rebatibles",
-        "Llantas simples 16\" x 650",
+        "Llantas simples de 16\"",
         "Capacidad máxima: 4 toneladas",
         "Sin cubiertas",
         "Opcionales: Kit de luces / Llantas duales"
@@ -223,29 +218,50 @@ export default function HomePage() {
           </div>
         </div>
       </nav>
-      
-      <header className="relative h-[80vh] flex items-center justify-center bg-zinc-950 overflow-hidden text-center px-4">
-        <div className="absolute inset-0 z-0">
-          <Image src="/images/3500-titan-atardecer.jpg" alt="Fondo ReVa Agro" fill className="object-cover opacity-20 blur-sm scale-105" priority />
-        </div>
-        
-        <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }} className="relative z-10">
-          <h2 className="text-red-600 font-black tracking-[0.4em] uppercase mb-10 text-xs md:text-base">Fabricación en Armstrong</h2>
-          
-          <div className="relative h-32 w-80 md:h-40 md:w-[26rem] mx-auto mb-10">
-            <Image src="/images/reva-agro-logo-nuevo-blanco.png" alt="Logo ReVa Agro" fill className="object-contain" priority />
-          </div>
 
-          <p className="mt-8 text-zinc-300 max-w-xl mx-auto text-lg md:text-xl font-medium leading-relaxed uppercase tracking-widest">
-            Maquinaria diseñada para resistir el trabajo más exigente del campo argentino.
-          </p>
-        </motion.div>
-      </header>
+      <header className="relative h-[80vh] flex items-center justify-center bg-zinc-950 overflow-hidden text-center px-4">
+  <div className="absolute inset-0 z-0">
+    <Image 
+      src="/images/Lugar reva.jpg" 
+      alt="Fondo ReVa Agro" 
+      fill 
+      className="object-cover opacity-60 blur-sm scale-105" 
+      priority 
+    />
+  </div>
+  
+  <motion.div 
+    initial={{ opacity: 0, y: 30 }} 
+    animate={{ opacity: 1, y: 0 }} 
+    transition={{ duration: 1 }} 
+    className="relative z-10 w-full"
+  >
+    <h2 className="text-red-600 font-black tracking-[0.4em] uppercase mb-10 text-xs md:text-base"></h2>
+    
+    <div className="relative h-32 w-80 md:h-48 md:w-[32rem] mx-auto mb-10">
+      <Image 
+        src="/images/reva-agro-logo-nuevo-blanco.png" 
+        alt="Logo ReVa Agro" 
+        fill 
+        className="object-contain" 
+        priority 
+      />
+    </div>
+
+    <p className="mt-8 text-white max-w-4xl mx-auto text-2xl md:text-5xl font-black italic leading-tight uppercase tracking-tighter drop-shadow-[0_10px_20px_rgba(0,0,0,0.4)]">
+      Transformamos tu esfuerzo, <br className="hidden md:block" /> 
+      en <span className="relative inline-block px-4 ml-1">
+          <span className="absolute inset-0 bg-red-600 -skew-x-12 transform"></span>
+          <span className="relative text-white">productividad.</span>
+        </span>
+    </p>
+  </motion.div>
+</header>
 
       <section id="productos" className="max-w-7xl mx-auto py-24 px-6 relative">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 border-l-4 border-red-600 pl-6 gap-8">
           <div>
-            <span className="text-sm font-bold uppercase tracking-widest text-red-600">Equipamiento Pesado</span>
+            <span className="text-sm font-bold uppercase tracking-widest text-red-600">Cartera de productos</span>
             <h2 className="text-5xl font-black uppercase text-zinc-900 tracking-tighter mt-1">Línea de Producción</h2>
           </div>
           

@@ -172,7 +172,6 @@ export default function HomePage() {
         "Capacidad de carga: 3.000 kg",
         "Altura máxima de elevación: entre 5 y 6 metros",
         "Llantas duales de 16\"",
-      
       ]
     },
     // --- PLAYOS ---
@@ -184,7 +183,7 @@ export default function HomePage() {
       image: '/images/4TN - PLAYO.png',
       wppMsg: 'Hola! Consulto por el Carro Playo de 4tn.',
       fullSpecs: [
-        "Dimensiones: largo 4000mm x ancho 1800mm (Corregido!)",
+        "Dimensiones: largo 4000mm x ancho 1800mm",
         "Ejes de 2\" con elásticos para 4tn",
         "Puertas laterales rebatibles",
         "Llantas simples de 16\"",
@@ -220,43 +219,43 @@ export default function HomePage() {
       </nav>
 
       <header className="relative h-[80vh] flex items-center justify-center bg-zinc-950 overflow-hidden text-center px-4">
-  <div className="absolute inset-0 z-0">
-    <Image 
-      src="/images/Lugar reva.jpg" 
-      alt="Fondo ReVa Agro" 
-      fill 
-      className="object-cover opacity-60 blur-sm scale-105" 
-      priority 
-    />
-  </div>
-  
-  <motion.div 
-    initial={{ opacity: 0, y: 30 }} 
-    animate={{ opacity: 1, y: 0 }} 
-    transition={{ duration: 1 }} 
-    className="relative z-10 w-full"
-  >
-    <h2 className="text-red-600 font-black tracking-[0.4em] uppercase mb-10 text-xs md:text-base"></h2>
-    
-    <div className="relative h-32 w-80 md:h-48 md:w-[32rem] mx-auto mb-10">
-      <Image 
-        src="/images/reva-agro-logo-nuevo-blanco.png" 
-        alt="Logo ReVa Agro" 
-        fill 
-        className="object-contain" 
-        priority 
-      />
-    </div>
+        <div className="absolute inset-0 z-0">
+          <Image 
+            src="/images/Lugar reva.jpg" 
+            alt="Fondo ReVa Agro" 
+            fill 
+            className="object-cover opacity-60 blur-sm scale-105" 
+            priority 
+          />
+        </div>
+        
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }} 
+          animate={{ opacity: 1, y: 0 }} 
+          transition={{ duration: 1 }} 
+          className="relative z-10 w-full"
+        >
+          <h2 className="text-red-600 font-black tracking-[0.4em] uppercase mb-10 text-xs md:text-base"></h2>
+          
+          <div className="relative h-32 w-80 md:h-48 md:w-[32rem] mx-auto mb-10">
+            <Image 
+              src="/images/reva-agro-logo-nuevo-blanco.png" 
+              alt="Logo ReVa Agro" 
+              fill 
+              className="object-contain" 
+              priority 
+            />
+          </div>
 
-    <p className="mt-8 text-white max-w-4xl mx-auto text-2xl md:text-5xl font-black italic leading-tight uppercase tracking-tighter drop-shadow-[0_10px_20px_rgba(0,0,0,0.4)]">
-      Transformamos tu esfuerzo, <br className="hidden md:block" /> 
-      en <span className="relative inline-block px-4 ml-1">
-          <span className="absolute inset-0 bg-red-600 -skew-x-12 transform"></span>
-          <span className="relative text-white">productividad.</span>
-        </span>
-    </p>
-  </motion.div>
-</header>
+          <p className="mt-8 text-white max-w-4xl mx-auto text-2xl md:text-5xl font-black italic leading-tight uppercase tracking-tighter drop-shadow-[0_10px_20px_rgba(0,0,0,0.4)]">
+            Transformamos tu esfuerzo, <br className="hidden md:block" /> 
+            en <span className="relative inline-block px-4 ml-1">
+                <span className="absolute inset-0 bg-red-600 -skew-x-12 transform"></span>
+                <span className="relative text-white">productividad.</span>
+              </span>
+          </p>
+        </motion.div>
+      </header>
 
       <section id="productos" className="max-w-7xl mx-auto py-24 px-6 relative">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 border-l-4 border-red-600 pl-6 gap-8">
@@ -323,20 +322,31 @@ export default function HomePage() {
             <Image src="/images/reva-agro-logo-nuevo-blanco.png" alt="ReVa Agro Logo" fill className="object-contain" />
           </div>
           <h3 className="text-4xl md:text-5xl font-black uppercase text-white tracking-tighter italic mb-20">
-            Transformamos tu esfuerzo, en <span className="text-red-600">productividad</span>
+            conocenos <span className="text-red-600">un poco más!</span>
           </h3>
-          <div className="grid md:grid-cols-3 gap-16 mb-24">
-            <div className="flex flex-col items-center gap-4">
-              <FaHandshake size={40} className="text-red-600" />
-              <h4 className="text-white font-black uppercase text-sm">Financiamiento directo de fabrica</h4>
-            </div>
-            <div className="flex flex-col items-center gap-4">
-              <FaTools size={40} className="text-red-600" />
-              <h4 className="text-white font-black uppercase text-sm">Atencion post-venta</h4>
-            </div>
-            <div className="flex flex-col items-center gap-4">
-              <FaIndustry size={40} className="text-red-600" />
-              <h4 className="text-white font-black uppercase text-sm">Industria Nacional</h4>
+          <div className="max-w-4xl mx-auto mb-32">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24">
+              {/* Financiamiento */}
+              <div className="flex flex-col items-center text-center group">
+                <div className="mb-6 p-4 rounded-full bg-zinc-900/50 border border-zinc-800 group-hover:border-red-600 transition-colors duration-300">
+                  <FaHandshake size={48} className="text-red-600" />
+                </div>
+                <h4 className="text-white font-black uppercase text-base md:text-lg tracking-widest leading-tight">
+                  Financiamiento <br /> directo de fábrica
+                </h4>
+                <div className="h-1 w-12 bg-red-600 mt-4"></div>
+              </div>
+              
+              {/* Industria Nacional */}
+              <div className="flex flex-col items-center text-center group">
+                <div className="mb-6 p-4 rounded-full bg-zinc-900/50 border border-zinc-800 group-hover:border-red-600 transition-colors duration-300">
+                  <FaIndustry size={48} className="text-red-600" />
+                </div>
+                <h4 className="text-white font-black uppercase text-base md:text-lg tracking-widest leading-tight">
+                  Industria <br /> Nacional
+                </h4>
+                <div className="h-1 w-12 bg-red-600 mt-4"></div>
+              </div>
             </div>
           </div>
           <Link href="/nosotros" className="inline-flex items-center gap-6 bg-zinc-800 hover:bg-white text-white hover:text-zinc-900 px-12 py-7 rounded-full border border-zinc-700 transition-all duration-500">

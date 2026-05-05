@@ -80,7 +80,7 @@ export default function HomePage() {
         "Capacidad: 3500 litros",
         "Transporte de: agua, fertilizantes, leche y combustibles",
         "Llantas simples de 17\" x 7\" x 1/4\"",
-        "Ejes de 2\" 1/2 con elásticos para 4tn",
+        "Ejes de 2\" con elásticos para 4tn",
         "Bidonera trasera y delantera",
         "Color de chasis: a elección",
         "Color de tanque: Amarillo - Gris Claro",
@@ -141,6 +141,7 @@ export default function HomePage() {
         "1 Movimiento hidráulico // Levante",
         "Capacidad de carga: 2.000 kg",
         "Altura máxima de elevación: entre 5 y 6 metros",
+        "Llantas simples de 16\"",
         "Colores a elección",
         "Opcionales: Llantas duales"
       ]
@@ -156,6 +157,7 @@ export default function HomePage() {
         "2 Movimientos hidráulicos // Levante + Extensión",
         "Capacidad de carga: 2.000 kg",
         "Altura máxima de elevación: entre 5 y 6 metros",
+        "Llantas simples de 16\"",
         "Colores a elección",
         "Opcionales: Llantas duales"
       ]
@@ -172,6 +174,7 @@ export default function HomePage() {
         "Capacidad de carga: 3.000 kg",
         "Altura máxima de elevación: entre 5 y 6 metros",
         "Llantas duales de 16\"",
+        "Incluye comando hidraúlico",
       ]
     },
     // --- PLAYOS ---

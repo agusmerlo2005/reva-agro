@@ -462,6 +462,53 @@ export default function HomePage() {
           </div>
         </div>
       </footer>
+
+{/* --- BOTÓN FLOTANTE ESTÉTICO DE INSTAGRAM --- */}
+      <AnimatePresence>
+        {!isLoading && (
+          <motion.a
+            href="https://www.instagram.com/revaagro.ar?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" // <-- PONER AQUÍ EL LINK REAL DE INSTAGRAM
+            target="_blank"
+            rel="noopener noreferrer"
+            initial={{ opacity: 0, x: 50, scale: 0.5 }}
+            animate={{ opacity: 1, x: 0, scale: 1 }}
+            transition={{ 
+              duration: 0.8, 
+              delay: 2.5, // Aparece justo después de que se va el Loader
+              type: "spring", 
+              stiffness: 100 
+            }}
+            whileHover={{ 
+              scale: 1.1, 
+              rotate: 5,
+              boxShadow: "0px 0px 20px rgba(220, 38, 38, 0.7)" // Brillo rojo intenso
+            }}
+            whileTap={{ scale: 0.9 }}
+            className="fixed bottom-6 right-6 z-50 flex items-center justify-center p-4 bg-red-600 rounded-full shadow-2xl border-2 border-white hover:bg-zinc-900 transition-colors duration-300 group"
+          >
+            {/* Ícono animado */}
+            <motion.div
+              animate={{ 
+                rotate: [0, 10, -10, 0],
+                scale: [1, 1.1, 1, 1] 
+              }}
+              transition={{
+                duration: 2,
+                repeat: Infinity,
+                repeatDelay: 3 // Pulsa cada 3 segundos
+              }}
+            >
+              <FaInstagram size={28} className="text-white group-hover:text-red-500 transition-colors" />
+            </motion.div>
+            
+            {/* Tooltip o Etiqueta al Hover (Estética Premium) */}
+            <span className="absolute right-full mr-4 bg-zinc-900 text-white text-[10px] font-black uppercase tracking-widest px-4 py-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap shadow-xl border border-zinc-700">
+              Seguinos en Instagram!
+            </span>
+          </motion.a>
+        )}
+      </AnimatePresence>
+
     </main>
   );
 }

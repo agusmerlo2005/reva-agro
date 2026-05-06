@@ -80,7 +80,7 @@ export default function HomePage() {
         "Capacidad: 3500 litros",
         "Transporte de: agua, fertilizantes, leche y combustibles",
         "Llantas simples de 17\" x 7\" x 1/4\"",
-        "Ejes de 2\" con elásticos para 4tn",
+        "Ejes de 2\" 1/2 con elásticos para 4tn",
         "Bidonera trasera y delantera",
         "Color de chasis: a elección",
         "Color de tanque: Amarillo - Gris Claro",
@@ -141,7 +141,6 @@ export default function HomePage() {
         "1 Movimiento hidráulico // Levante",
         "Capacidad de carga: 2.000 kg",
         "Altura máxima de elevación: entre 5 y 6 metros",
-        "Llantas simples de 16\"",
         "Colores a elección",
         "Opcionales: Llantas duales"
       ]
@@ -157,7 +156,6 @@ export default function HomePage() {
         "2 Movimientos hidráulicos // Levante + Extensión",
         "Capacidad de carga: 2.000 kg",
         "Altura máxima de elevación: entre 5 y 6 metros",
-        "Llantas simples de 16\"",
         "Colores a elección",
         "Opcionales: Llantas duales"
       ]
@@ -174,7 +172,6 @@ export default function HomePage() {
         "Capacidad de carga: 3.000 kg",
         "Altura máxima de elevación: entre 5 y 6 metros",
         "Llantas duales de 16\"",
-        "Incluye comando hidraúlico",
       ]
     },
     // --- PLAYOS ---
@@ -214,7 +211,7 @@ export default function HomePage() {
 
             <div className="flex gap-6 md:gap-8 text-zinc-400 text-[10px] md:text-sm font-bold uppercase tracking-widest overflow-x-auto no-scrollbar pb-2 md:pb-0">
               <a href="#productos" className="hover:text-red-500 transition-colors whitespace-nowrap">Productos</a>
-              <a href="#nosotros" className="hover:text-red-500 transition-colors whitespace-nowrap">Nosotros</a>
+              {/* Oculto Nosotros del Nav momentáneamente */}
               <a href="#contacto" className="hover:text-red-500 transition-colors whitespace-nowrap">Contacto</a>
             </div>
           </div>
@@ -238,8 +235,6 @@ export default function HomePage() {
           transition={{ duration: 1 }} 
           className="relative z-10 w-full"
         >
-          <h2 className="text-red-600 font-black tracking-[0.4em] uppercase mb-10 text-xs md:text-base"></h2>
-          
           <div className="relative h-32 w-80 md:h-48 md:w-[32rem] mx-auto mb-10">
             <Image 
               src="/images/reva-agro-logo-nuevo-blanco.png" 
@@ -319,17 +314,11 @@ export default function HomePage() {
         </motion.div>
       </section>
 
-      <section id="nosotros" className="bg-zinc-900 py-32 border-y border-zinc-800 relative text-center">
+      {/* SECCIÓN DE VALORES (FINANCIAMIENTO / INDUSTRIA) - SE MANTIENE PORQUE DA CUERPO A LA MARCA */}
+      <section className="bg-zinc-900 py-32 border-y border-zinc-800 relative text-center">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="relative h-20 w-48 md:h-24 md:w-56 mx-auto mb-8">
-            <Image src="/images/reva-agro-logo-nuevo-blanco.png" alt="ReVa Agro Logo" fill className="object-contain" />
-          </div>
-          <h3 className="text-4xl md:text-5xl font-black uppercase text-white tracking-tighter italic mb-20">
-            conocenos <span className="text-red-600">un poco más!</span>
-          </h3>
-          <div className="max-w-4xl mx-auto mb-32">
+          <div className="max-w-4xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24">
-              {/* Financiamiento */}
               <div className="flex flex-col items-center text-center group">
                 <div className="mb-6 p-4 rounded-full bg-zinc-900/50 border border-zinc-800 group-hover:border-red-600 transition-colors duration-300">
                   <FaHandshake size={48} className="text-red-600" />
@@ -340,7 +329,6 @@ export default function HomePage() {
                 <div className="h-1 w-12 bg-red-600 mt-4"></div>
               </div>
               
-              {/* Industria Nacional */}
               <div className="flex flex-col items-center text-center group">
                 <div className="mb-6 p-4 rounded-full bg-zinc-900/50 border border-zinc-800 group-hover:border-red-600 transition-colors duration-300">
                   <FaIndustry size={48} className="text-red-600" />
@@ -352,10 +340,6 @@ export default function HomePage() {
               </div>
             </div>
           </div>
-          <Link href="/nosotros" className="inline-flex items-center gap-6 bg-zinc-800 hover:bg-white text-white hover:text-zinc-900 px-12 py-7 rounded-full border border-zinc-700 transition-all duration-500">
-            <span className="font-black uppercase tracking-[0.2em] text-xs">Conocé nuestra historia</span>
-            <FaChevronRight size={10} className="text-red-600" />
-          </Link>
         </div>
       </section>
 
@@ -401,7 +385,6 @@ export default function HomePage() {
                 </div>
               </div>
 
-              {/* WHATSAPP INTERACTIVO */}
               <div className="flex items-center gap-4 md:gap-6">
                 <div className="bg-red-600/10 p-3 md:p-4 rounded-2xl text-red-600"><FaWhatsapp size={20} /></div>
                 <div>
@@ -417,7 +400,6 @@ export default function HomePage() {
                 </div>
               </div>
 
-              {/* EMAIL INTERACTIVO */}
               <div className="flex items-center gap-4 md:gap-6 overflow-hidden">
                 <div className="bg-red-600/10 p-3 md:p-4 rounded-2xl text-red-600"><FaEnvelope size={20} /></div>
                 <div>
@@ -463,52 +445,29 @@ export default function HomePage() {
         </div>
       </footer>
 
-{/* --- BOTÓN FLOTANTE ESTÉTICO DE INSTAGRAM --- */}
+      {/* BOTÓN FLOTANTE DE INSTAGRAM */}
       <AnimatePresence>
         {!isLoading && (
           <motion.a
-            href="https://www.instagram.com/revaagro.ar?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" // <-- PONER AQUÍ EL LINK REAL DE INSTAGRAM
+            href="https://www.instagram.com/reva.agro"
             target="_blank"
             rel="noopener noreferrer"
             initial={{ opacity: 0, x: 50, scale: 0.5 }}
             animate={{ opacity: 1, x: 0, scale: 1 }}
-            transition={{ 
-              duration: 0.8, 
-              delay: 2.5, // Aparece justo después de que se va el Loader
-              type: "spring", 
-              stiffness: 100 
-            }}
-            whileHover={{ 
-              scale: 1.1, 
-              rotate: 5,
-              boxShadow: "0px 0px 20px rgba(220, 38, 38, 0.7)" // Brillo rojo intenso
-            }}
+            transition={{ duration: 0.8, delay: 0.5, type: "spring", stiffness: 100 }}
+            whileHover={{ scale: 1.1, rotate: 5, boxShadow: "0px 0px 20px rgba(220, 38, 38, 0.7)" }}
             whileTap={{ scale: 0.9 }}
             className="fixed bottom-6 right-6 z-50 flex items-center justify-center p-4 bg-red-600 rounded-full shadow-2xl border-2 border-white hover:bg-zinc-900 transition-colors duration-300 group"
           >
-            {/* Ícono animado */}
-            <motion.div
-              animate={{ 
-                rotate: [0, 10, -10, 0],
-                scale: [1, 1.1, 1, 1] 
-              }}
-              transition={{
-                duration: 2,
-                repeat: Infinity,
-                repeatDelay: 3 // Pulsa cada 3 segundos
-              }}
-            >
+            <motion.div animate={{ rotate: [0, 10, -10, 0], scale: [1, 1.1, 1, 1] }} transition={{ duration: 2, repeat: Infinity, repeatDelay: 3 }}>
               <FaInstagram size={28} className="text-white group-hover:text-red-500 transition-colors" />
             </motion.div>
-            
-            {/* Tooltip o Etiqueta al Hover (Estética Premium) */}
             <span className="absolute right-full mr-4 bg-zinc-900 text-white text-[10px] font-black uppercase tracking-widest px-4 py-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap shadow-xl border border-zinc-700">
               Seguinos en Instagram!
             </span>
           </motion.a>
         )}
       </AnimatePresence>
-
     </main>
   );
 }

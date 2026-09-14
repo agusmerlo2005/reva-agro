@@ -80,7 +80,7 @@ export default function HomePage() {
         "Capacidad: 3500 litros",
         "Transporte de: agua, fertilizantes, leche y combustibles",
         "Llantas simples de 17\" x 7\" x 1/4\"",
-        "Ejes de 2\" 1/2 con elásticos para 4tn",
+        "Ejes de 2\" con elásticos para 4tn",
         "Bidonera trasera y delantera",
         "Color de chasis: a elección",
         "Color de tanque: Amarillo - Gris Claro",
@@ -169,7 +169,7 @@ export default function HomePage() {
       wppMsg: 'Hola! Consulto por la Grúa El Cóndor de 3 movimientos.',
       fullSpecs: [
         "3 Movimientos hidráulicos // Levante + Extensión + Giro",
-        "Capacidad de carga: 3.000 kg",
+        "Capacidad de carga: 2000 a 2500 kg",
         "Altura máxima de elevación: entre 5 y 6 metros",
         "Llantas duales de 16\"",
       ]
